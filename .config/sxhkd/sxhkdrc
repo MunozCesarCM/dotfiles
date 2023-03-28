@@ -1,0 +1,30 @@
+mod5 + w
+    qutebrowser
+
+mod5 + a
+    st -e bash ~/code/bash/fuzzy-find-directory.sh
+
+mod5 + s
+    st -e alsamixer
+
+mod5 + d
+    rofi -no-lazy-grab -show drun -modi drun -sorting-method fzf -theme style.rasi -no-sort -disable-history
+
+mod5 + f
+    st -e bash ~/code/bash/fuzzy-find-file.sh
+
+mod5 + c
+    st
+
+mod5 + v
+    st -e bashmount
+
+
+super + s
+    IMAGETIME=$(date "+%B%d%y_%I%M%S"); maim --select "$IMAGETIME".png; xclip -selection clipboard -t image/png -i "$IMAGETIME".png; rm "$IMAGETIME".png
+
+super + shift + s
+    IMAGETIME=$(date "+%B%d%y_%I%M%S"); maim --select "$IMAGETIME".png; mv "$IMAGETIME".png ~/images/screenshots
+
+super {1,2,3,4,5,6,7,8,9,0}
+    sudo xbacklight -set {1,2,3,5,10,20,30,50,75,100}
