@@ -21,4 +21,6 @@ vim.opt.lazyredraw = true      -- Don't redraw while executing macros
 vim.opt.wrap = false           -- Don't wrap lines when opening vim
 vim.opt.splitbelow = true      -- Open new window below current one
 vim.opt.splitright = true      -- Open new window to the right of current one
+vim.opt.termguicolors = true   -- Enables true colors support
 vim.opt.undodir = vim.fn.expand('~/config/.nvim/undodir')
+vim.cmd('colorscheme ayu')     -- Set the colorscheme

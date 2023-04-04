@@ -24,7 +24,7 @@ lazy.setup({
     -- Colorscheme:
     -- The colorscheme should be available when starting Neovim.
     {
-      "olimorris/onedarkpro.nvim",
+      "Luxed/ayu-vim",
       priority = 1000 -- Ensure it loads first
     },
 
