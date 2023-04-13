@@ -50,7 +50,7 @@ zsh_prompt_home() {
 
 function set_prompt {
     #PROMPT='%B${NEWLINE}%F{blue} $(ls -l | grep "^-" | wc -l | tr -d " ")   / %F{yellow}$(ls -l | grep "^d" | wc -l | tr -d " ")   / %F{magenta}$(ls --si -s | head -1 | cut -c 7-) 󰉉  / %F{green}$(zsh_prompt_home) /${NEWLINE} %(?.$THEME_VI_MODE_SYMBOL.$THEME_VI_MODE_SYMBOL) %F{white} '
-    PROMPT='%B${NEWLINE}%F{blue} $(ls -l | grep "^-" | wc -l | tr -d " ")   %F{white}| %F{yellow}$(ls -l | grep "^d" | wc -l | tr -d " ")   %F{white}| %F{green}$(zsh_prompt_home)${NEWLINE} %(?.$THEME_VI_MODE_SYMBOL.$THEME_VI_MODE_SYMBOL) %F{white} '
+    PROMPT='%B${NEWLINE}%F{blue} $(ls -l | grep "^-" | wc -l | tr -d " ")   %F{white}| %F{yellow}$(ls -l | grep "^d" | wc -l | tr -d " ")   %F{white}| %F{green}$(zsh_prompt_home)${NEWLINE} %(?.$THEME_VI_MODE_SYMBOL.$THEME_VI_MODE_SYMBOL) %F{white} %b'
   RPROMPT='%(?.%F{blue} .%F{red} )'
 }
 
