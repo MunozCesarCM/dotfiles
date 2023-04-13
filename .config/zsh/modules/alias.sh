@@ -31,10 +31,3 @@ alias co='~/code/bash/auto-compile-cpp.sh'
 alias ff='~/code/bash/fuzzy-find-file.sh'
 alias fcd='~/code/bash/fuzzy-find-directory.sh'
 alias chwp='~/code/bash/change-wallpaper.sh'
-
-# pacman alias
-alias pi="pacman -Slq | fzf --layout=reverse --info=inline --margin=1 --color='bg+:-1,info:7' --preview 'pacman -Si {1}' --preview-window=down | xargs -ro sudo pacman -S"
-alias pd="pacman -Qqen | fzf --layout=reverse --info=inline --margin=1 --color='bg+:-1,info:7' --preview 'pacman -Qi {1}' --preview-window=down | xargs -ro sudo pacman -Rns"
-alias yi="yay -Slq | fzf --layout=reverse --info=inline --margin=1 --color='bg+:-1,info:7' --preview 'yay -Si {1}' --preview-window=down | xargs -ro yay -S"
-alias yd="yay -Qqm | fzf --layout=reverse --info=inline --margin=1 --color='bg+:-1,info:7' --preview 'yay -Qi {1}' --preview-window=down | xargs -ro yay -Rns"
-
