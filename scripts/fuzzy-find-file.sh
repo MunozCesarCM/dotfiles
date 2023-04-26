@@ -3,7 +3,17 @@
 # Go to home directory and search for files
 cd
 file=$(fd -H \
-    -E .cache -E .vim -E .config/coc -E .local -E '*.git/' -E .mozilla --type f | fzf )
+  -E .cache \
+  -E .vim \
+  -E .pki \
+  -E .npm \
+  -E .local \
+  -E .mozilla \
+  -E .config/coc \
+  -E .config/yarn \
+  -E '**/node_modules/' \
+  -E '**.git/' \
+  --type f | fzf )
 
 # Get file extension
 extension=$(echo ${file} | awk -F . '{print $NF}')
