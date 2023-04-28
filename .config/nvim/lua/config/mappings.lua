@@ -53,3 +53,6 @@ map('n', '<leader>c', ':call ToggleTerm()<CR>', { noremap = true })
 map('n', '<leader>f', ':Telescope find_files<cr>')
 map('n', '<leader>g', ':Telescope live_grep<cr>')
 
+-- Undodir toggle
+map('n', '<leader>u', ':UndotreeToggle<cr>')
+
