@@ -5,6 +5,11 @@
 -- Plugin: nvim-treesitter
 -- url: https://github.com/nvim-treesitter/nvim-treesitter
 
+local lsp = require('lsp-zero')
+
+lsp.preset('recommended')
+lsp.nvim_workspace()
+lsp.setup()
 
 local status_ok, nvim_treesitter = pcall(require, 'nvim-treesitter.configs')
 if not status_ok then

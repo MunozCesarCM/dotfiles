@@ -5,11 +5,11 @@
 vim.opt.number = true          -- Show the line number if front of each line
 vim.opt.relativenumber = true  -- Show the relative number on each line
 vim.opt.laststatus = 3         -- Only the last window will have a status line
-vim.opt.tabstop = 2            -- Number of spaces that a tab uses
-vim.opt.softtabstop = 2        -- Number of spaces that a tab uses while editing
-vim.opt.shiftwidth = 2         -- Number of spaces to use for the autoindent
+vim.opt.tabstop = 4            -- Number of spaces that a tab uses
+vim.opt.softtabstop = 4        -- Number of spaces that a tab uses while editing
+vim.opt.shiftwidth = 4         -- Number of spaces to use for the autoindent
 vim.opt.expandtab = true       -- Use spaces when a tab is inserted
-vim.opt.colorcolumn = '80'     -- Column to hightlight
+vim.opt.colorcolumn = '100'    -- Column to hightlight
 vim.opt.cursorline = true      -- Highlight the line where the cursor is placed
 vim.opt.swapfile = false       -- Don't use a swapfile for a buffer
 vim.opt.wrap = true            -- Wrap text on overflow
