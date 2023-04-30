@@ -2,7 +2,7 @@ mod5 + w
     qutebrowser
 
 mod5 + a
-    st -e bash ~/code/bash/fuzzy-find-directory.sh
+    st -e bash ~/code/scripts/fuzzy-find-directory.sh
 
 mod5 + s
     st -e alsamixer
@@ -11,7 +11,7 @@ mod5 + d
     rofi -no-lazy-grab -show drun -modi drun -sorting-method fzf -theme style.rasi -no-sort -disable-history
 
 mod5 + f
-    st -e bash ~/code/bash/fuzzy-find-file.sh
+    st -e bash ~/code/scripts/fuzzy-find-file.sh
 
 mod5 + c
     st
