@@ -1,0 +1,7 @@
+#!/bin/sh
+
+sxhkd &
+$HOME/code/scripts/dwmstatus.sh &
+$HOME/code/scripts/change-keyboard-layout.sh &
+
+exec dwm
