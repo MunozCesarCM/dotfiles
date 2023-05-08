@@ -62,7 +62,14 @@ lazy.setup({
     },
 
     -- Treesitter
-    { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' },
+    { 'nvim-treesitter/nvim-treesitter',
+      build = ':TSUpdate',
+      config = function ()
+        require('nvim-treesitter.configs').setup {
+          indent = { enable = true }
+        }
+      end
+    },
 
     -- Autopair
     {
