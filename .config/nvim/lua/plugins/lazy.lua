@@ -85,5 +85,11 @@ lazy.setup({
 
     -- Undo Tree
     { 'mbbill/undotree' },
+
+    -- Floating Terminal
+    { 'voldikss/vim-floaterm' },
+
+    -- Blank Line Indentaion
+    { "lukas-reineke/indent-blankline.nvim" },
   }
 })
