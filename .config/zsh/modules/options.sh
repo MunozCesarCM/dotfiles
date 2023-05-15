@@ -52,7 +52,7 @@ bindkey -M menuselect 'l' vi-forward-char
 bindkey -M menuselect 'j' vi-down-line-or-history
 
 export FZF_DEFAULT_OPTS=" \
---color=bg+:#000000,bg:#000000,spinner:#f5e0dc,hl:#e5c07b \
+--color=bg+:#0D1017,bg:#0D1017,spinner:#f5e0dc,hl:#e5c07b \
 --color=fg:#abb2bf,header:#e5c07b,info:#cba6f7,pointer:#f5e0dc \
 --color=marker:#f5e0dc,fg+:#fafafa,prompt:#cba6f7,hl+:#e5c07b \
 --layout=reverse --info=inline --margin=3"

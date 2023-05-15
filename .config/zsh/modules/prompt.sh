@@ -41,16 +41,20 @@ NEWLINE=$'\n'
 TRANSIENT_PROMPT='${NEWLINE}%B$ '
 
 zsh_prompt_home() {
-    if [ $(pwd) = /home/cesar ]; then
-        echo "home"
-    else
-        basename $(pwd)
-    fi
+  if [ $(pwd) = /home/cesar ]; then
+    echo "home"
+  else
+    basename $(pwd)
+  fi
+}
+
+zsh_prompt_size() {
+  du -sch | head -1 | awk '{print $1}'
 }
 
 function set_prompt {
-    #PROMPT='%B${NEWLINE}%F{blue} $(ls -l | grep "^-" | wc -l | tr -d " ")   / %F{yellow}$(ls -l | grep "^d" | wc -l | tr -d " ")   / %F{magenta}$(ls --si -s | head -1 | cut -c 7-) 󰉉  / %F{green}$(zsh_prompt_home) /${NEWLINE} %(?.$THEME_VI_MODE_SYMBOL.$THEME_VI_MODE_SYMBOL) %F{white} '
-    PROMPT='%B${NEWLINE}%F{blue} $(ls -l | grep "^-" | wc -l | tr -d " ")   %F{white}| %F{yellow}$(ls -l | grep "^d" | wc -l | tr -d " ")   %F{white}| %F{green}$(zsh_prompt_home)${NEWLINE} %(?.$THEME_VI_MODE_SYMBOL.$THEME_VI_MODE_SYMBOL) %F{white} %b'
+  PROMPT='%B${NEWLINE}%F{blue} $(ls -l | grep "^-" | wc -l | tr -d " ")F %F{white}| %F{yellow}$(ls -l | grep "^d" | wc -l | tr -d " ")D %F{white}| %F{green}$(zsh_prompt_home)${NEWLINE} %(?.$THEME_VI_MODE_SYMBOL.$THEME_VI_MODE_SYMBOL)%F{white}%B  '
+  #PROMPT='%B${NEWLINE}%F{blue} $(ls -l | grep "^-" | wc -l | tr -d " ")F %F{white}| %F{yellow}$(ls -l | grep "^d" | wc -l | tr -d " ")D %F{white}| %F{magenta}$(zsh_prompt_size) %F{white}| %F{green}$(zsh_prompt_home)${NEWLINE} %(?.$THEME_VI_MODE_SYMBOL.$THEME_VI_MODE_SYMBOL) %F{white} '
   RPROMPT='%(?.%F{blue} .%F{red} )'
 }
 
