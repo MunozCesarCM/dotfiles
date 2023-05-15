@@ -108,27 +108,27 @@ unsigned int tabspaces = 4;
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
   /* 8 normal colors */
-  [0] = "#000000",
-	[1] = "#ef596f",
-	[2] = "#e5c07b",
-	[3] = "#d19a66",
-	[4] = "#61afef",
-	[5] = "#d55fd3",
-	[6] = "#2bbac5",
-	[7] = "#abb2bf",
+  [0] = "#0D1017", /* black */
+	[1] = "#D95757", /* red */
+	[2] = "#AAD94C", /* green */
+	[3] = "#FFB454", /* yellow */
+	[4] = "#59C2FF", /* blue */
+	[5] = "#D2A6FF", /* magenta */
+	[6] = "#F29668", /* cyan */
+	[7] = "#BFBDB6", /* white */
 
-  [8] = "#000000",
-	[9] = "#ef596f",
-	[10] = "#89ca78",
-	[11] = "#d19a66",
-	[12] = "#61afef",
-	[13] = "#d55fd3",
-	[14] = "#2bbac5",
-	[15] = "#abb2bf",
+  [8] = "#0D1017",  /* black */
+	[9] = "#D95757",  /* red */
+	[10] = "#AAD94C", /* green */
+	[11] = "#FFB454", /* yellow */
+	[12] = "#59C2FF", /* blue */
+	[13] = "#D2A6FF", /* magenta */
+	[14] = "#F29668", /* cyan */
+	[15] = "#BFBDB6", /* white */
 
   /* special colors */
-  [256] = "#000000", /* background */
-  [257] = "#abb2bf", /* foreground */
+  [256] = "#0D1017", /* background */
+  [257] = "#BFBDB6", /* foreground */
 
   [255] = 0,
 };

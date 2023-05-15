@@ -6,9 +6,9 @@ static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 0;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "JetBrainsMono:style=Bold:size=16" };
-static const char col_bg[]         = "#000000";
-static const char col_fg[]         = "#FCFCFC";
-static const char col_main[]       = "#FCFCFC";
+static const char col_bg[]         = "#0D1017";
+static const char col_fg[]         = "#BFBDB6";
+static const char col_main[]       = "#BFBDB6";
 static const char *colors[][3]      = {
   /*               fg         bg         border   */
   [SchemeNorm] = { col_fg, col_bg, col_bg },
