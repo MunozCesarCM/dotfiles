@@ -44,6 +44,14 @@ autocmd( { 'BufRead', 'BufReadPost' }, {
   end,
 })
 
+-- Show line diagnostics automatically in hover window
+autocmd( { 'CursorHold', 'CursorHoldI' }, {
+  pattern = '*',
+  callback = function()
+    vim.diagnostic.open_float(nil, {focus = false})
+  end
+})
+
 -- Terminal settings:
 ---------------------
 

@@ -9,7 +9,7 @@ vim.opt.tabstop = 2            -- Number of spaces that a tab uses
 vim.opt.softtabstop = 2        -- Number of spaces that a tab uses while editing
 vim.opt.shiftwidth = 2         -- Number of spaces to use for the autoindent
 vim.opt.expandtab = true       -- Use spaces when a tab is inserted
-vim.opt.colorcolumn = '80'    -- Column to hightlight
+vim.opt.colorcolumn = '80'     -- Column to hightlight
 vim.opt.cursorline = true      -- Highlight the line where the cursor is placed
 vim.opt.swapfile = false       -- Don't use a swapfile for a buffer
 vim.opt.wrap = true            -- Wrap text on overflow
@@ -22,6 +22,7 @@ vim.opt.wrap = false           -- Don't wrap lines when opening vim
 vim.opt.splitbelow = true      -- Open new window below current one
 vim.opt.splitright = true      -- Open new window to the right of current one
 vim.opt.termguicolors = true   -- Enables true colors support
+vim.opt.updatetime = 250       -- # of milliseconds to flush swap file
 vim.opt.undofile = true        -- Save undo history to a file
 vim.opt.undodir = vim.fn.expand('~/config/.nvim/undodir')
 vim.cmd('colorscheme ayu')     -- Set the colorscheme
