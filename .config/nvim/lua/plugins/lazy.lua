@@ -1,3 +1,6 @@
+-- Required for Hex Colorizer
+vim.opt.termguicolors = true -- Enables true colors support
+
 -- Bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
@@ -73,7 +76,21 @@ lazy.setup({
       'windwp/nvim-autopairs',
       event = 'InsertEnter',
       config = function()
-        require('nvim-autopairs').setup{}
+        require('nvim-autopairs').setup {}
+      end
+    },
+
+    -- Hex Colorizer
+    {
+      'norcalli/nvim-colorizer.lua',
+      config = function()
+        require('colorizer').setup (
+          { '*' },
+          {
+            RRGGBBAA = true,
+            rgb_fn = true,
+            hsl_fn = true,
+          })
       end
     },
 
@@ -87,6 +104,6 @@ lazy.setup({
     { 'voldikss/vim-floaterm' },
 
     -- Blank Line Indentaion
-    { "lukas-reineke/indent-blankline.nvim" },
+    { 'lukas-reineke/indent-blankline.nvim' },
   }
 })
