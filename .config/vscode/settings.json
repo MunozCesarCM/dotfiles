@@ -1,0 +1,53 @@
+{
+  "cSpell.languageSettings": [],
+  "editor.fontSize": 16,
+  "editor.tabSize": 2,
+  "editor.cursorStyle": "block",
+  "editor.cursorBlinking": "solid",
+  "breadcrumbs.enabled": false,
+  "workbench.iconTheme": "ayu",
+  "workbench.tree.indent": 16,
+  "window.autoDetectColorScheme": true,
+  "workbench.preferredDarkColorTheme": "Ayu Dark Bordered",
+  "workbench.preferredLightColorTheme": "Ayu Light Bordered",
+  "telemetry.telemetryLevel": "off",
+  "workbench.colorCustomizations": {
+    "statusBar.foreground": "#FFFFFF",
+    "statusBar.background": "#1a82cc",
+    "statusBar.noFolderBackground": "#399EE6",
+    "statusBar.debuggingBackground": "#399EE6"
+  },
+  "debug.enableStatusBarColor": false,
+  "tabnine.experimentalAutoImports": true,
+  "workbench.colorTheme": "Ayu Dark Bordered",
+  "terminal.integrated.env.osx": {},
+  "editor.formatOnSave": true,
+  "editor.scrollbar.verticalScrollbarSize": 6,
+  "editor.scrollbar.horizontal": "hidden",
+  "editor.wordWrap": "off",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+  // Vim Configuration
+  "vim.cursorStylePerMode.insert": "line",
+  "vim.smartRelativeLine": true,
+  "vim.statusBarColors.normal": "#399EE6",
+  "vim.statusBarColors.insert": "#86B300",
+  "vim.statusBarColors.commandlineinprogress": "#FA8D3E",
+  "vim.statusBarColors.visual": "#A47ACC",
+  "vim.statusBarColors.visualline": "#A47ACC",
+  "vim.statusBarColors.visualblock": "#A47ACC",
+  "vim.highlightedyank.color": "rgba(57, 158, 230, 0.75)",
+  "vim.highlightedyank.enable": true,
+  "vim.highlightedyank.textColor": "#FFFFFF",
+  "vim.leader": "<space>",
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["H"],
+      "after": ["0", "^"]
+    },
+    {
+      "before": ["L"],
+      "after": ["$"]
+    }
+  ]
+}
