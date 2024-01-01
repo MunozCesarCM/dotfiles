@@ -52,10 +52,20 @@ zsh_prompt_size() {
   du -sch | head -1 | awk '{print $1}'
 }
 
+git_branch_name() {
+  branch=$(git symbolic-ref HEAD 2> /dev/null | awk 'BEGIN{FS="/"} {print $NF}')
+  if [[ $branch == "" ]];
+  then
+    :
+  else
+    echo '%F{yellow}@'$branch''
+  fi
+}
+
 function set_prompt {
-  PROMPT='%B${NEWLINE}%F{blue} $(ls -l | grep "^-" | wc -l | tr -d " ")F %F{white}| %F{yellow}$(ls -l | grep "^d" | wc -l | tr -d " ")D %F{white}| %F{green}$(zsh_prompt_home)${NEWLINE} %(?.$THEME_VI_MODE_SYMBOL.$THEME_VI_MODE_SYMBOL)%F{white}%B  '
   #PROMPT='%B${NEWLINE}%F{blue} $(ls -l | grep "^-" | wc -l | tr -d " ")F %F{white}| %F{yellow}$(ls -l | grep "^d" | wc -l | tr -d " ")D %F{white}| %F{magenta}$(zsh_prompt_size) %F{white}| %F{green}$(zsh_prompt_home)${NEWLINE} %(?.$THEME_VI_MODE_SYMBOL.$THEME_VI_MODE_SYMBOL) %F{white} '
-  RPROMPT='%(?.%F{blue} .%F{red} )'
+  PROMPT='%B%F{blue}$(whoami) %F{white}in %F{green}$(zsh_prompt_home) $(git_branch_name)${NEWLINE}%(?.$THEME_VI_MODE_SYMBOL.$THEME_VI_MODE_SYMBOL)%F{white}%B '
+  RPROMPT='%(?.%F{blue}OK .%F{red}ERR)'
 }
 
 typeset -g _transient_prompt_newline=
