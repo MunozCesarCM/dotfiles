@@ -1,0 +1,45 @@
+[env]
+term = "xterm-256color"
+
+[font]
+size = 19
+
+[font.normal]
+family = "JetBrains Mono"
+
+[font.bold]
+style = "Bold"
+family = "JetBrains Mono"
+
+[font.italic]
+style = "Italic"
+family = "JetBrains Mono"
+
+[font.bold_italic]
+style = "Bold Italic"
+family = "JetBrains Mono"
+
+[colors.primary]
+background = "#121212"
+foreground = "#C5C8C6"
+
+[colors.normal]
+black = "#1F2430"
+red = "#FF3333"
+green = "#C2D94C"
+yellow = "#FFB454"
+blue = "#39BAE6"
+magenta = "#A37ACC"
+cyan = "#95E6CB"
+white = "#C5C8C6"
+
+[colors.bright]
+black = "#1F2430"
+red = "#FF3333"
+green = "#C2D94C"
+yellow = "#FFB454"
+blue = "#39BAE6"
+magenta = "#A37ACC"
+cyan = "#95E6CB"
+white = "#C5C8C6"
+

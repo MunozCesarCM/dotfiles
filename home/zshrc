@@ -1,0 +1,3 @@
+for FILE in $HOME/.config/zsh/modules/*; do
+    source $FILE
+done
