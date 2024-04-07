@@ -1,6 +1,9 @@
 [env]
 term = "xterm-256color"
 
+[window]
+dynamic_padding = true
+
 [font]
 size = 19
 
@@ -20,11 +23,11 @@ style = "Bold Italic"
 family = "JetBrains Mono"
 
 [colors.primary]
-background = "#121212"
+background = "#0D1017"
 foreground = "#C5C8C6"
 
 [colors.normal]
-black = "#1F2430"
+black = "#0D1017"
 red = "#FF3333"
 green = "#C2D94C"
 yellow = "#FFB454"
@@ -34,7 +37,7 @@ cyan = "#95E6CB"
 white = "#C5C8C6"
 
 [colors.bright]
-black = "#1F2430"
+black = "#0D1017"
 red = "#FF3333"
 green = "#C2D94C"
 yellow = "#FFB454"
