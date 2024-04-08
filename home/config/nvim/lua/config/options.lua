@@ -25,5 +25,6 @@ vim.o.wrap = false                         -- Wrap lines longer than window widt
 vim.wo.signcolumn = 'auto'                 -- Keep sign column
 vim.o.updatetime = 100                     -- Cursorhold timeout
 vim.o.termguicolors = true                 -- Enable true colors if the terminal supports it
+vim.opt.swapfile = false                   -- Disable swapfiles
 vim.o.completeopt = 'menuone,preview,noselect'  -- Set completeopt for a better completion experience
 
