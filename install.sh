@@ -1,12 +1,10 @@
 #!/bin/sh
 
-# Remove all dead links in home directory.
-rm "$HOME"/*(-@D)
-
 # Link all dotfiles to those in this repo.
-for dotfile in "$HOME"/dotfiles/home/*; do
-    echo "$dotfile"
-    echo "$HOME/.${dotfile##*/}"
-    ln -fsnv "$dotfile" "$HOME/.${dotfile##*/}"
+ln -fsnv "$HOME/dotfiles/home/xinitrc" "$HOME/.xinitrc"
+ln -fsnv "$HOME/dotfiles/home/zshrc" "$HOME/.zshrc"
+
+for dotfile in "$HOME"/dotfiles/home/config/*; do
+    ln -fsnv "$dotfile" "$HOME/.config/${dotfile##*/}"
 done
 
