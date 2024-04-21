@@ -5,38 +5,40 @@ vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
 vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 
-vim.keymap.set('n', 'gg', 'gg0')                                                    -- Go to start of line
-vim.keymap.set('n', '<leader>c', ':tabnew +term<CR>i')        -- Open terminal
-vim.keymap.set('n', '<leader>r', vim.lsp.buf.rename)            -- Rename item
-vim.keymap.set('n', '<leader>t', ':NvimTreeToggle<CR>')     -- Toggle tree
-vim.keymap.set('n', '<leader>p', ':Prettier<CR>')                 -- Apply Prettier
-vim.keymap.set('n', '<leader>a', '<C-^>')                                 -- Swap between two files
-vim.keymap.set('v', '<C-y>', '"+y')                                             -- Copy to the system clipboard)
-vim.keymap.set('n', '<leader>u', ':UndotreeToggle<CR>5<C-w>l') -- Open UndoTree
+-- Quality of life remaps
+vim.keymap.set('n', 'gg', 'gg0')
+vim.keymap.set("n", "<C-d>", "<C-d>zz")
+vim.keymap.set("n", "<C-u>", "<C-u>zz")
+vim.keymap.set("n", "n", "nzzzv")
+vim.keymap.set("n", "N", "Nzzzv")
 
+vim.keymap.set('n', '<leader>c', ':tabnew +term<CR>i')         -- Open terminal
+vim.keymap.set('n', '<leader>r', vim.lsp.buf.rename)           -- Rename item
+vim.keymap.set("n", "<leader>p", vim.lsp.buf.format)           -- Format file
+vim.keymap.set('n', '<leader>t', ':NvimTreeToggle<CR>')        -- Toggle tree
+vim.keymap.set('n', '<leader>a', '<C-^>')                      -- Swap between two files
+vim.keymap.set('v', '<C-y>', '"+y')                            -- Copy to the system clipboard)
+vim.keymap.set('n', '<leader>u', ':UndotreeToggle<CR>5<C-w>l') -- Open UndoTree
+vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>')               -- Exit terminal mode
+
+vim.keymap.set("n", "<C-j>", "<cmd>cnext<CR>zz")
+vim.keymap.set("n", "<C-k>", "<cmd>cprev<CR>zz")
+
+-- Telescope configuration
 local telescope = require('telescope.builtin')
 local telescope_config = {
     layout_config = {
-        preview_width = 0.6,
+        preview_width = 0.45,
         width = 0.8,
         height = 0.8,
         prompt_position = "top",
     },
-    file_ignore_patterns = {
-        "node_modules",
-        "dist",
-    },
+    file_ignore_patterns = { "node_modules", "dist" }
 }
 
-vim.keymap.set('n', '<leader>f', function()
-    telescope.find_files( telescope_config )
-end, {})
-vim.keymap.set('n', '<leader>g', function()
-    telescope.live_grep( telescope_config )
-end, {})
-vim.keymap.set('n', '<leader>h', function()
-    telescope.help_tags( telescope_config )
-end, {})
+vim.keymap.set('n', '<leader>f', function() telescope.find_files(telescope_config) end)
+vim.keymap.set('n', '<leader>g', function() telescope.live_grep(telescope_config) end)
+vim.keymap.set('n', '<leader>h', function() telescope.help_tags(telescope_config) end)
 
 -- Harpoon Keybinds
 local harpoon = require("harpoon")

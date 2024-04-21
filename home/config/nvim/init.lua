@@ -67,11 +67,6 @@ require('lazy').setup({
     { 'nvim-tree/nvim-tree.lua',
         config = function() require('plugins.nvimtree') end },
 
-    -- Prettier
-    { 'jose-elias-alvarez/null-ls.nvim' },
-    { 'MunifTanjim/prettier.nvim',
-        config = function() require('plugins.prettier') end },
-
     -- LSP Support
     {'williamboman/mason.nvim'},
     {'williamboman/mason-lspconfig.nvim'},

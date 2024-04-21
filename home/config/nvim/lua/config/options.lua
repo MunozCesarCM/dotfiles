@@ -9,7 +9,6 @@ vim.o.shiftwidth = 4
 vim.o.expandtab = true
 vim.o.autoindent = true
 
--- General options
 vim.o.cursorline = true                    -- Highlight the current line
 vim.o.colorcolumn = "80"                   -- Draw a line at column 80
 vim.o.scrolloff = 10                       -- Scroll offset before reaching the end of the screen
@@ -25,6 +24,6 @@ vim.o.wrap = false                         -- Wrap lines longer than window widt
 vim.wo.signcolumn = 'auto'                 -- Keep sign column
 vim.o.updatetime = 100                     -- Cursorhold timeout
 vim.o.termguicolors = true                 -- Enable true colors if the terminal supports it
-vim.opt.swapfile = false                   -- Disable swapfiles
+vim.o.swapfile = false                     -- Disable keeping swapfiles
 vim.o.completeopt = 'menuone,preview,noselect'  -- Set completeopt for a better completion experience
 
